@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/scss/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/graphql-playground-react/build/static/js/middleware.js"></script>
+    <title>GraphQL - LP DAWIN</title>
+</head>
+<body>
+    <header>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#section-2">Introduction</a></li>
+                <li><a href="#section-3">GraphQL en détails</a></li>
+                <li><a href="#section-4">API Rest & GraphQL</a></li>
+                <li><a href="#section-5">Documentation</a></li>
+            </ul>
+            <div class="doc"><a href="https://graphql.org/" target="_blank" class="graphCC">Site officiel</a></div>
+        </nav>
+
+    </header>
+    <main>
+        <section id="section-1" class="introduction">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img src="/assets/img/logo.png" alt="logo">
+                    </div>
+                    <div id="custom-responsive-section" class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                        <h1>Graph<span class="graphCC">QL</span></h1>
+                        <h2>Veille Technologique</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-2" class="">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                        <p>
+                            GraphQL est un langage de requête et un environnement d'exécution côté serveur pour les interfaces de programmation d'application (API) 
+                            permettant de limiter les requêtes aux simples données demandées par le client.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-3" class="details"> 
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="cards">
+                        <div class="card card-one">
+                            <h2 class="card-title">Qu'est-ce que graphQL&nbsp;?</h2>
+                            <p class="date">Origine & vocation</p>
+                            <p class="description">GraphQL est un langage de requête et un environnement d'exécution crée par Facebook en 2012 et rendu open-source en 2015...</p>
+                            <a data-bs-toggle="modal" data-bs-target="#modalOne">
+                                Tous les détails
+                            </a>
+                        </div>
+                        
+                        <div class="card card-two">
+                            <h2 class="card-title">Mise en place&nbsp;?</h2>
+                            <p class="date">Création & utilisation</p>
+                            <p class="description">Il existe de nombreux outils qui supportent graphQL ou aident à construire des API graphQL, dans de de multiples langages...</p>
+                            <a data-bs-toggle="modal" data-bs-target="#modalTwo">
+                                Tous les détails
+                            </a>
+                        </div>
+                        
+                        <div class="card card-three">
+                            <h2 class="card-title">Quels avantages&nbsp;?</h2>
+                            <p class="date">Avantages & comparatif</p>
+                            <p class="description">
+                                Flexibilité accrue, 
+                                Meilleure expérience de développement, 
+                                Amélioration de la performance et 
+                                Evolutivité.
+                            </p>
+                            <a data-bs-toggle="modal" data-bs-target="#modalThree">
+                                Tous les détails
+                            </a>
+                        </div>
+                        
+                        <div class="card card-four">
+                            <h2 class="card-title">Quels inconvénients&nbsp;?</h2>
+                            <p class="date">Inconvénients & comparatif</p>
+                            <p class="description">
+                                Complexité de la mise en place, 
+                                Apprentissage difficile, 
+                                Sécurité et
+                                Limitations de données traitées.
+                            </p>
+                            <a data-bs-toggle="modal" data-bs-target="#modalFour">
+                                Tous les détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-4">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="content-s-4">
+                        <h2 class="text-center">
+                            Restfull API et Graph<span class="graphCC">QL</span> API <br>
+                            <span class="graphCC">requêtes et données.</span>
+                        </h2>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">GraphQL API</button>
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Restful API</button>
+                            <button class="tousmaispastoi" data-bs-toggle="modal" data-bs-target="#modalFive">Playground GraphQL</button>
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="code-bg">
+                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione natus aliquid asperiores animi deserunt ipsum quas illum laboriosam, nobis facere quidem sit molestias, expedita nulla velit sapiente placeat ut culpa quam quisquam! Est sit deleniti a aut mollitia labore minus tenetur sed minima, neque aliquid assumenda unde omnis amet voluptates reiciendis quae pariatur sunt saepe nam atque? Id officia hic ratione ea provident. Consequuntur perferendis suscipit est, velit distinctio quasi! Tenetur, quod fuga nihil nemo neque adipisci numquam aperiam reiciendis officia velit, nostrum ducimus asperiores. Ut, consectetur officia nostrum esse inventore possimus, ullam corporis obcaecati necessitatibus, et ratione itaque.</code>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="code-bg">
+                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem rem veritatis eos, nisi placeat error aliquam quo accusantium soluta doloribus voluptatum recusandae voluptate ex assumenda magni temporibus culpa debitis ea. Sapiente debitis doloremque possimus eum, quam fuga officia fugit ratione voluptates quis accusantium repudiandae officiis repellendus omnis praesentium nostrum facilis vel. Amet temporibus commodi veniam molestias, reiciendis similique facere laborum illo et, sint est, architecto dolorem atque aliquam maxime. Non rem quibusdam hic autem consequuntur itaque omnis, quasi est illum sit ullam debitis. Nihil in doloribus nobis laborum sed fugiat distinctio illum. Commodi iure provident odio hic consequatur? Expedita?</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="code-bg">
+                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione natus aliquid asperiores animi deserunt ipsum quas illum laboriosam, nobis facere quidem sit molestias, expedita nulla velit sapiente placeat ut culpa quam quisquam! Est sit deleniti a aut mollitia labore minus tenetur sed minima, neque aliquid assumenda unde omnis amet voluptates reiciendis quae pariatur sunt saepe nam atque? Id officia hic ratione ea provident. Consequuntur perferendis suscipit est, velit distinctio quasi! Tenetur, quod fuga nihil nemo neque adipisci numquam aperiam reiciendis officia velit, nostrum ducimus asperiores. Ut, consectetur officia nostrum esse inventore possimus, ullam corporis obcaecati necessitatibus, et ratione itaque.</code>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="code-bg">
+                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem rem veritatis eos, nisi placeat error aliquam quo accusantium soluta doloribus voluptatum recusandae voluptate ex assumenda magni temporibus culpa debitis ea. Sapiente debitis doloremque possimus eum, quam fuga officia fugit ratione voluptates quis accusantium repudiandae officiis repellendus omnis praesentium nostrum facilis vel. Amet temporibus commodi veniam molestias, reiciendis similique facere laborum illo et, sint est, architecto dolorem atque aliquam maxime. Non rem quibusdam hic autem consequuntur itaque omnis, quasi est illum sit ullam debitis. Nihil in doloribus nobis laborum sed fugiat distinctio illum. Commodi iure provident odio hic consequatur? Expedita?</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-5">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="content-s-5">
+                        <h2 class="text-left">
+                            Bibliographie <br>
+                            & documentation Graph<span class="graphCC">QL</span>
+                        </h2>
+                        <ol>
+                            <li>GraphQL tools et intégration : <a href="https://graphql.org/code/">https://graphql.org/code/</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="modalOne" tabindex="-1" aria-labelledby="modalOneLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Qu'est-ce que Graph<span class="graphCC">QL</span>?</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    <h3>D'où provient graphQL ?</h3>
+                                    <p>
+                                        GraphQL a été initialement développé par Facebook en 2012 pour remplacer la pile de réseau de l'application mobile Facebook. Les développeurs de Facebook ont créé GraphQL pour résoudre les problèmes de surcharge de données et de latence qui se posaient lors de l'utilisation d'une API REST traditionnelle pour alimenter l'application mobile.
+                                    </p>
+                                    <p>
+                                        En 2015, Facebook a publié GraphQL en tant que projet open source, ce qui a permis à d'autres développeurs de l'utiliser pour construire leurs propres API. Depuis lors, GraphQL est devenue une technologie populaire pour la construction d'API et est utilisée par de nombreuses entreprises et organisations, y compris GitHub, Pinterest et Airbnb.
+                                    </p>
+                                    <p>
+                                        En 2019, la Fondation Linux a créé la Linux Foundation GraphQL Foundation, une organisation à but non lucratif qui a pour but de promouvoir l'adoption et l'amélioration de GraphQL en tant que standard ouvert pour les API. Aujourd'hui, GraphQL est devenue une technologie largement utilisée et reconnue dans l'industrie de la technologie de l'information pour la construction d'API flexibles et efficaces.
+                                    </p>
+                                </p>
+                                <div>
+                                    <h3>Concrètement ça sert à quoi ?</h3>
+                                    <p>
+                                        GraphQL est un langage de requête et un système de runtime pour les API (Application Programming Interface, ou interface de programmation d'application) qui permet aux clients de décrire les données dont ils ont besoin et comment elles doivent être structurées. GraphQL est conçu pour offrir une flexibilité accrue et une meilleure expérience de développement aux clients en leur permettant de demander exactement les données dont ils ont besoin, plutôt que de recevoir un ensemble de données prédéterminées qui peuvent ne pas être nécessaires ou utilisées.
+                                    </p>
+                                    <p>
+                                        GraphQL est souvent utilisé pour construire des API pour les applications Web et mobile, car il permet aux développeurs de créer des API plus robustes et flexibles qui répondent aux besoins spécifiques de chaque client. En utilisant GraphQL, les développeurs peuvent également éviter les problèmes de surcharge de données et de latence liés à l'envoi de données superflues sur le réseau.    
+                                    </p>
+                                    <p>
+                                        En résumé, GraphQL est un langage de requête qui permet aux clients de décrire de manière précise les données qu'ils souhaitent obtenir auprès d'une API, ce qui peut améliorer la flexibilité et l'efficacité des applications en réseau.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalTwo" tabindex="-1" aria-labelledby="modalTwoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Mise en place de Graph<span class="graphCC">QL</span> ?</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Il existe plusieurs façons de développer une API avec GraphQL. Voici quelques exemples :
+                                </p>
+                                <ol>
+                                    <li>
+                                        En utilisant un framework de développement de serveur GraphQL, comme Express-GraphQL ou Apollo Server. Ces frameworks offrent une interface simple pour définir les types de données et les resolvers de GraphQL, et pour configurer un serveur GraphQL qui peut être intégré à un serveur web existant.
+                                    </li>
+                                    <li>
+                                        En utilisant une bibliothèque de client GraphQL, comme Apollo Client ou Relay, pour écrire une application web qui utilise GraphQL pour interroger un serveur distant.
+                                    </li>
+                                    <li>
+                                        En utilisant une bibliothèque de serveur GraphQL telle que GraphQL.js pour écrire un serveur GraphQL à partir de zéro en utilisant Node.js. Cette approche nécessite une connaissance approfondie de GraphQL et de l'implémentation de serveur GraphQL, mais elle peut être utile dans des cas où vous souhaitez un contrôle total sur la façon dont le serveur GraphQL est mis en place et exécuté.
+                                    </li>
+                                    <p>
+                                        Il existe également des services en ligne qui vous permettent de développer une API GraphQL sans avoir à gérer l'infrastructure de serveur. Par exemple, AWS AppSync et Graphcool sont des services de back-end basés sur GraphQL qui vous permettent de développer une API GraphQL sans avoir à écrire de code de serveur.
+                                    </p>
+                                    <h3>Comment travailler avec graphQL :</h3>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalThree" tabindex="-1" aria-labelledby="modalThreeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Quels sont les avantages de Graph<span class="graphCC">QL</span></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    GraphQL présente plusieurs avantages par rapport aux API REST traditionnelles :
+                                </p>
+                                <ol>
+                                    <li>
+                                        Flexibilité accrue : avec GraphQL, les clients peuvent spécifier exactement les données dont ils ont besoin et comment elles doivent être structurées. Cela signifie que les clients peuvent obtenir exactement les données dont ils ont besoin sans avoir à recevoir de données superflues.
+                                    </li>
+                                    <li>
+                                        Meilleure expérience de développement : GraphQL offre une syntaxe simple et intuitive qui facilite la création de requêtes et la gestion des réponses des serveurs. Cela peut rendre le développement d'applications plus rapide et plus facile.
+                                    </li>
+                                    <li>
+                                        Amélioration de la performance : GraphQL permet aux clients de demander exactement les données dont ils ont besoin, ce qui peut réduire la quantité de données envoyées sur le réseau et améliorer les temps de chargement des pages.
+                                    </li>
+                                    <li>
+                                        Évolutivité : GraphQL est conçu pour être évolutif et facilite l'ajout de nouvelles fonctionnalités et de nouvelles sources de données sans avoir à modifier les interfaces existantes.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Il convient de noter que GraphQL n'est pas toujours la meilleure solution pour tous les cas d'utilisation et qu'il peut y avoir des cas où une API REST sera plus appropriée. Cependant, pour de nombreux projets de développement d'API, GraphQL peut offrir une meilleure flexibilité et une meilleure expérience de développement que les API REST traditionnelles.                            </div>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFour" tabindex="-1" aria-labelledby="modalFourLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Quels sont les inconvénients de graph<span class="graphCC">QL</span> ?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Voici quelques inconvénients potentiels de l'utilisation de GraphQL :
+                                </p>
+                                <ol>
+                                    <li>
+                                        Complexité de la mise en place : GraphQL nécessite un serveur dédié et une implémentation côté serveur pour fonctionner, ce qui peut être plus complexe à mettre en place que certaines autres technologies d'API.
+                                    </li>
+                                    <li>
+                                        Apprentissage : GraphQL est un nouveau langage de requête et peut nécessiter un temps d'apprentissage pour comprendre comment fonctionne et comment l'utiliser efficacement.
+                                    </li>
+                                    <li>
+                                        Sécurité : les attaques de type "injection de requête" sont possibles avec GraphQL, bien que cela puisse être évité en utilisant des mesures de sécurité appropriées et en validant les requêtes côté serveur.
+                                    </li>
+                                    <li>
+                                        Limitations de la pile de données : GraphQL ne peut pas être utilisé pour travailler avec des données qui ne sont pas structurées, comme les données binaires ou les fichiers multimédias.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Il convient de noter que ces inconvénients ne sont pas exclusifs à GraphQL et que de nombreuses autres technologies d'API présentent également certaines limitations et complexités. Cependant, il est important de comprendre ces limitations et de prendre en compte ces facteurs lors de la décision de choisir GraphQL pour un projet de développement d'API.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFive" tabindex="-1" aria-labelledby="modalFourLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Playground graph<span class="graphCC">QL</span></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div id="playground"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Et bah non, pas de footer.
+    </footer>
+    <script>
+        window.addEventListener('load', function (event) {
+            GraphQLPlayground.init(document.getElementById('playground'), {
+            // options as 'endpoint' belong here
+            })
+        })
+    </script>
+</body>
+</html>
