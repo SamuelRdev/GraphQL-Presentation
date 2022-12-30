@@ -43,10 +43,10 @@
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-12 d-flex align-items-center justify-content-center">
-                        <p>
-                            GraphQL est un langage de requête et un environnement d'exécution côté serveur pour les interfaces de programmation d'application (API) 
-                            permettant de limiter les requêtes aux simples données demandées par le client.
+                        <p class="typing">
+                            GraphQL est un langage de requête d'API et un système de communication qui permet aux clients de décrire les données dont ils ont besoin et de les recevoir sous la forme de données structurées, en évitant la surcharge de données inutiles.
                         </p>
+                        <div id="writeHere"></div>
                     </div>
                 </div>
             </div>
@@ -123,28 +123,141 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="code-bg">
-                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione natus aliquid asperiores animi deserunt ipsum quas illum laboriosam, nobis facere quidem sit molestias, expedita nulla velit sapiente placeat ut culpa quam quisquam! Est sit deleniti a aut mollitia labore minus tenetur sed minima, neque aliquid assumenda unde omnis amet voluptates reiciendis quae pariatur sunt saepe nam atque? Id officia hic ratione ea provident. Consequuntur perferendis suscipit est, velit distinctio quasi! Tenetur, quod fuga nihil nemo neque adipisci numquam aperiam reiciendis officia velit, nostrum ducimus asperiores. Ut, consectetur officia nostrum esse inventore possimus, ullam corporis obcaecati necessitatibus, et ratione itaque.</code>
+                                                <code>
+                                                    <span class="blue-vsc">query</span> { <br>
+                                                        &nbsp;&nbsp;<span class="green-vsc">book</span>(<span class="orange-vsc">id</span>: <span class="graphCC">"123"</span>) { <br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">title</span> <br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">author</span>{ <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">name</span> <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">bio</span> <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">publisher</span> <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">publicationDate</span> <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="green-vsc">genre</span> <br>
+                                                                &nbsp;&nbsp;} <br>
+                                                      } <br>
+                                                </code>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="code-bg">
-                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem rem veritatis eos, nisi placeat error aliquam quo accusantium soluta doloribus voluptatum recusandae voluptate ex assumenda magni temporibus culpa debitis ea. Sapiente debitis doloremque possimus eum, quam fuga officia fugit ratione voluptates quis accusantium repudiandae officiis repellendus omnis praesentium nostrum facilis vel. Amet temporibus commodi veniam molestias, reiciendis similique facere laborum illo et, sint est, architecto dolorem atque aliquam maxime. Non rem quibusdam hic autem consequuntur itaque omnis, quasi est illum sit ullam debitis. Nihil in doloribus nobis laborum sed fugiat distinctio illum. Commodi iure provident odio hic consequatur? Expedita?</code>
+                                                <code>
+                                                    { <br>
+                                                        &nbsp;&nbsp;<span class="orange-vsc">"data"</span>: { <br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"book"</span>: { <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"title"</span>: <span class="green-vsc">"Les Misérables"</span>, <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"author"</span>: { <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"name"</span>: <span class="green-vsc">"Victor Hugo"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"bio"</span>: <span class="green-vsc">"Victor Hugo est un écrivain, poète et dramaturge français, connu pour ses romans et ses pièces de théâtre, notamment Notre-Dame de Paris et Les Misérables."</span> <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"publisher"</span>: <span class="green-vsc">"Éditions Gallimard"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"publicationDate"</span>: <span class="green-vsc">"1962-01-01"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue-vsc">"genre"</span>: <span class="green-vsc">"roman historique"</span> <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                                                    &nbsp;&nbsp;} <br>
+                                                      } <br>
+                                                </code>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="code-bg">
-                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione natus aliquid asperiores animi deserunt ipsum quas illum laboriosam, nobis facere quidem sit molestias, expedita nulla velit sapiente placeat ut culpa quam quisquam! Est sit deleniti a aut mollitia labore minus tenetur sed minima, neque aliquid assumenda unde omnis amet voluptates reiciendis quae pariatur sunt saepe nam atque? Id officia hic ratione ea provident. Consequuntur perferendis suscipit est, velit distinctio quasi! Tenetur, quod fuga nihil nemo neque adipisci numquam aperiam reiciendis officia velit, nostrum ducimus asperiores. Ut, consectetur officia nostrum esse inventore possimus, ullam corporis obcaecati necessitatibus, et ratione itaque.</code>
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="rest1-tab" data-bs-toggle="tab" data-bs-target="#rest1" type="button" role="tab" aria-controls="nav-home" aria-selected="true">1</button>
+                                        <button class="nav-link" id="rest2-tab" data-bs-toggle="tab" data-bs-target="#rest2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">2</button>
+                                        <button class="nav-link" id="rest3-tab" data-bs-toggle="tab" data-bs-target="#rest3" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">3</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="rest1" role="tabpanel" aria-labelledby="rest1-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="code-bg">
+                                                        <code>
+                                                            <span class="graphCC">GET https:</span>//api.example.com/<span class="green-vsc">books/123</span>
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="code-bg">
+                                                        <code>
+                                                            { <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"id"</span>: <span class="green-vsc">"123"</span>, <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"title"</span>: <span class="green-vsc">"Les Misérables"</span>, <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"authorId"</span>: <span class="green-vsc">"456"</span>, <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"publisher"</span>: <span class="green-vsc">"Éditions Gallimard"</span>, <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"publicationDate"</span>: <span class="green-vsc">"1962-01-01"</span>, <br>
+                                                                &nbsp;&nbsp;<span class="graphCC">"genre"</span>: <span class="green-vsc">"roman historique"</span> <br>
+                                                            }
+                                                        </code>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="code-bg">
-                                                <code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem rem veritatis eos, nisi placeat error aliquam quo accusantium soluta doloribus voluptatum recusandae voluptate ex assumenda magni temporibus culpa debitis ea. Sapiente debitis doloremque possimus eum, quam fuga officia fugit ratione voluptates quis accusantium repudiandae officiis repellendus omnis praesentium nostrum facilis vel. Amet temporibus commodi veniam molestias, reiciendis similique facere laborum illo et, sint est, architecto dolorem atque aliquam maxime. Non rem quibusdam hic autem consequuntur itaque omnis, quasi est illum sit ullam debitis. Nihil in doloribus nobis laborum sed fugiat distinctio illum. Commodi iure provident odio hic consequatur? Expedita?</code>
+                                    </div>
+                                    <div class="tab-pane fade" id="rest2" role="tabpanel" aria-labelledby="rest2-tab" tabindex="0">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="rest1" role="tabpanel" aria-labelledby="rest1-tab" tabindex="0">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="code-bg">
+                                                                <code>
+                                                                    <span class="graphCC">GET https:</span>//api.example.com/<span class="green-vsc">authors/456</span>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="code-bg">
+                                                                <code>
+                                                                    { <br>
+                                                                        &nbsp;&nbsp;<span class="graphCC">"id"</span>: <span class="green-vsc">"456"</span>, <br>
+                                                                        &nbsp;&nbsp;<span class="graphCC">"name"</span>: <span class="green-vsc">"Victor Hugo"</span>, <br>
+                                                                        &nbsp;&nbsp;<span class="graphCC">"bio"</span>: <span class="green-vsc">"Victor Hugo est un écrivain, poète et dramaturge français, connu pour ses romans et ses pièces de théâtre, notamment Notre-Dame de Paris et Les Misérables."</span> <br>
+                                                                    }
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="rest3" role="tabpanel" aria-labelledby="rest3-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="code-bg">
+                                                        <code>
+                                                            <span class="graphCC">GET https:</span>//api.example.com/<span class="green-vsc">reviews?bookId=123</span>
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="code-bg">
+                                                        <code>
+                                                            [ <br>
+                                                            &nbsp;&nbsp;{ <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"id"</span>: <span class="green-vsc">"789"</span>, <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"bookId"</span>: <span class="green-vsc">"123"</span>, <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"rating"</span>: <span class="green-vsc">4</span>, <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"reviewText"</span>: <span class="green-vsc">"Un roman épique et passionnant!"</span>, <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"reviewerId"</span>: <span class="green-vsc">"12"</span> <br>
+                                                                &nbsp;&nbsp;}, <br>
+                                                                &nbsp;&nbsp;{ <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"id"</span>: <span class="green-vsc">"790"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"bookId"</span>: <span class="green-vsc">"123"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"rating"</span>: <span class="green-vsc">3</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"reviewText"</span>: <span class="green-vsc">"Pas fan ^^"</span>, <br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="graphCC">"reviewerId"</span>: <span class="green-vsc">"13"</span> <br>
+                                                                    &nbsp;&nbsp;} <br>
+                                                            ]
+                                                        </code>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -164,10 +277,10 @@
                             & documentation Graph<span class="graphCC">QL</span>
                         </h2>
                         <ol>
-                            <li>GraphQL tools et intégration : <a href="https://graphql.org/code/">https://graphql.org/code/</a></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>GraphQL tools et intégration : <a href="https://graphql.org/code/" target="_blank">https://graphql.org/code/</a></li>
+                            <li>Rest vs GraphQL : <a href="https://kinsta.com/fr/blog/graphql-vs-rest/" target="_blank">https://kinsta.com/fr/blog/graphql-vs-rest/</a></li>
+                            <li>GraphQL API playground : <a href="https://countries.trevorblades.com/" target="_blank">https://countries.trevorblades.com/</a></li>
+                            <li>Support vidéo : <a href="https://www.youtube.com/watch?v=6FtdUoyBK7c&list=PLl3CtU4THqPZd5ZrMYnljdgJzMQ35FhNl" target="_blank">https://www.youtube.com/watch?v=6FtdUoyBK7c&list=PLl3CtU4THqPZd5ZrMYnljdgJzMQ35FhNl</a></li>
                         </ol>
                     </div>
                 </div>
@@ -346,12 +459,13 @@
     <footer>
         Et bah non, pas de footer.
     </footer>
-    <script>
+    <!-- <script>
         window.addEventListener('load', function (event) {
             GraphQLPlayground.init(document.getElementById('playground'), {
             // options as 'endpoint' belong here
             })
         })
-    </script>
+    </script> -->
+    <script src="/assets/js/typing.js"></script>
 </body>
 </html>

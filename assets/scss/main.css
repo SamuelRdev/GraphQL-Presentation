@@ -94,6 +94,16 @@ body main #section-2 p {
   font-size: 1.5rem;
   text-align: center;
 }
+body main #section-2 #writeHere {
+  color: #202020;
+  font-size: 1.5rem;
+  text-align: center;
+}
+body main #section-2 #writeHere span {
+  color: #202020;
+  font-size: 1.5rem;
+  text-align: center;
+}
 body main #section-4 {
   background-color: #202020;
   color: white;
@@ -148,7 +158,10 @@ body main #section-4 .tab-content {
 body main #section-4 .code-bg {
   background-color: #1d1e22;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  padding: 30px;
+  padding: 50px;
+}
+body main #section-4 code {
+  color: #aaa;
 }
 body main #section-5 {
   color: #202020;
@@ -335,4 +348,26 @@ body footer {
     justify-content: flex-start !important;
     align-items: center !important;
   }
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  margin-top: 8px;
+  margin-left: 1px;
+  position: absolute;
+}
+
+.orange-vsc {
+  color: rgb(247, 116, 102);
+}
+
+.blue-vsc {
+  color: rgb(42, 126, 211);
+}
+
+.green-vsc {
+  color: rgb(41, 185, 115);
 }/*# sourceMappingURL=main.css.map */

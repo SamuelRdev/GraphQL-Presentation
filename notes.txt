@@ -1,0 +1,5 @@
+1 seul endpoint
+
+Une seule requete vs multiples requetes
+
+Requêtes http
