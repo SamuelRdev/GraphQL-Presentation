@@ -11,8 +11,12 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   color: white;
   background: rgb(245, 246, 248);
+}
+body a {
+  word-break: break-all;
 }
 body #navigation {
   z-index: 12;
@@ -24,12 +28,19 @@ body #navigation {
   height: 10vh;
   position: fixed;
 }
+@media (max-width: 900px) {
+  body #navigation {
+    font-size: 0.9rem;
+  }
+}
 @media (max-width: 768px) {
   body #navigation {
     flex-direction: column;
     align-items: center;
     height: auto;
     padding: 10px 0;
+    position: relative;
+    background-color: #202020;
   }
 }
 body #navigation ul {
@@ -45,6 +56,8 @@ body #navigation ul {
     margin: 0;
     width: 100%;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 0;
   }
 }
 body #navigation ul li {
@@ -89,6 +102,11 @@ body main #section-2 {
   max-width: 60%;
   margin: 0 auto;
 }
+@media (max-width: 992px) {
+  body main #section-2 {
+    max-width: 90%;
+  }
+}
 body main #section-2 p {
   color: #202020;
   font-size: 1.5rem;
@@ -103,6 +121,11 @@ body main #section-2 #writeHere span {
   color: #202020;
   font-size: 1.5rem;
   text-align: center;
+}
+@media (max-width: 600px) {
+  body main #section-2 #writeHere span {
+    font-size: 1rem;
+  }
 }
 body main #section-4 {
   background-color: #202020;
@@ -125,6 +148,11 @@ body main #section-4 .nav-tabs button, body main #section-4 .nav-tabs a {
   border-radius: 3px;
   padding: 7px 25px;
   transition: 0.3s;
+}
+@media (max-width: 500px) {
+  body main #section-4 .nav-tabs button, body main #section-4 .nav-tabs a {
+    margin-top: 20px;
+  }
 }
 body main #section-4 .nav-tabs button:nth-child(even), body main #section-4 .nav-tabs a:nth-child(even) {
   background-color: transparent;
@@ -182,6 +210,14 @@ body main #section-5 .content-s-5 h2 {
 body main section {
   min-height: 100vh;
   height: 100vh;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  body main section {
+    height: auto;
+    padding: 50px 0;
+  }
 }
 body .modal {
   color: #202020;
@@ -228,6 +264,9 @@ body .modal .modal-dialog .modal-content .modal-header .btn-close {
   right: 20px;
   top: 20px;
 }
+body .modal .modal-dialog .modal-content .modal-body h3 {
+  margin-top: 50px;
+}
 body .modal .modal-dialog .modal-content .modal-body h3:after {
   content: "";
   height: 4px;
@@ -240,6 +279,12 @@ body footer {
   text-align: center;
   background-color: #202020;
   padding: 20px;
+}
+body footer a {
+  color: #e10098;
+}
+body footer a:hover {
+  text-decoration: none;
 }
 
 /*CARDS*/
@@ -256,12 +301,16 @@ body footer {
 }
 @media (max-width: 1200px) {
   #section-3 .container .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #section-3 .container .cards {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    max-height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 #section-3 .container .card {
@@ -321,9 +370,21 @@ body footer {
   transform: rotate(-5deg);
   margin-top: -50px;
 }
+@media (max-width: 1201px) {
+  #section-3 .container .card:nth-child(even) {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
+}
 #section-3 .container .card:nth-child(odd) {
   transform: rotate(5deg);
   margin-top: 50px;
+}
+@media (max-width: 1201px) {
+  #section-3 .container .card:nth-child(odd) {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
 }
 #section-3 .cards:hover > .card:hover {
   transform: scale(1.15);
@@ -347,6 +408,12 @@ body footer {
   #custom-responsive-section {
     justify-content: flex-start !important;
     align-items: center !important;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #custom-responsive-section h2 {
+    text-align: center;
   }
 }
 
@@ -370,4 +437,11 @@ body footer {
 
 .green-vsc {
   color: rgb(41, 185, 115);
+}
+
+.slick-list {
+  width: 100%;
+}
+.slick-list .slick-track {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
