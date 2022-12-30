@@ -302,28 +302,32 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>
-                                    <h3>D'où provient graphQL ?</h3>
-                                    <p>
-                                        GraphQL a été initialement développé par Facebook en 2012 pour remplacer la pile de réseau de l'application mobile Facebook. Les développeurs de Facebook ont créé GraphQL pour résoudre les problèmes de surcharge de données et de latence qui se posaient lors de l'utilisation d'une API REST traditionnelle pour alimenter l'application mobile.
-                                    </p>
-                                    <p>
-                                        En 2015, Facebook a publié GraphQL en tant que projet open source, ce qui a permis à d'autres développeurs de l'utiliser pour construire leurs propres API. Depuis lors, GraphQL est devenue une technologie populaire pour la construction d'API et est utilisée par de nombreuses entreprises et organisations, y compris GitHub, Pinterest et Airbnb.
-                                    </p>
-                                    <p>
-                                        En 2019, la Fondation Linux a créé la Linux Foundation GraphQL Foundation, une organisation à but non lucratif qui a pour but de promouvoir l'adoption et l'amélioration de GraphQL en tant que standard ouvert pour les API. Aujourd'hui, GraphQL est devenue une technologie largement utilisée et reconnue dans l'industrie de la technologie de l'information pour la construction d'API flexibles et efficaces.
-                                    </p>
-                                </p>
                                 <div>
-                                    <h3>Concrètement ça sert à quoi ?</h3>
+                                    <h3>Historiquement, d'où ça vient ?</h3>
                                     <p>
-                                        GraphQL est un langage de requête et un système de runtime pour les API (Application Programming Interface, ou interface de programmation d'application) qui permet aux clients de décrire les données dont ils ont besoin et comment elles doivent être structurées. GraphQL est conçu pour offrir une flexibilité accrue et une meilleure expérience de développement aux clients en leur permettant de demander exactement les données dont ils ont besoin, plutôt que de recevoir un ensemble de données prédéterminées qui peuvent ne pas être nécessaires ou utilisées.
+                                        GraphQL a été développé en 2012 par Lee Byron, Dan Schafer et Nick Schrock pour le compte de Facebook. Son objectif était de remplacer la pile de réseau de l'application mobile Facebook. Les développeurs de Facebook ont créé GraphQL pour résoudre les problèmes de surcharge de données et de latence qui se posaient lors de l'utilisation de l'API de Facebook, une API REST traditionnelle, pour alimenter leur naissante application mobile.
                                     </p>
                                     <p>
-                                        GraphQL est souvent utilisé pour construire des API pour les applications Web et mobile, car il permet aux développeurs de créer des API plus robustes et flexibles qui répondent aux besoins spécifiques de chaque client. En utilisant GraphQL, les développeurs peuvent également éviter les problèmes de surcharge de données et de latence liés à l'envoi de données superflues sur le réseau.    
+                                        En 2015, Facebook publie GraphQL en tant que projet open source, ce qui permet à d'autres développeurs de l'utiliser pour construire leurs propres API. Depuis lors, GraphQL est devenue une technologie populaire pour la construction d'API et est utilisée par de nombreuses entreprises et organisations. Entreprises parmi lesquels on peut compter GitHub, Pinterest et Airbnb.
                                     </p>
                                     <p>
-                                        En résumé, GraphQL est un langage de requête qui permet aux clients de décrire de manière précise les données qu'ils souhaitent obtenir auprès d'une API, ce qui peut améliorer la flexibilité et l'efficacité des applications en réseau.
+                                        En 2019, la Fondation Linux créait la Linux Foundation GraphQL Foundation, une organisation à but non lucratif qui a pour but de promouvoir l'adoption et l'amélioration de GraphQL en tant que standard ouvert pour les API. Aujourd'hui, GraphQL est une technologie largement utilisée et reconnue dans l'industrie de la technologie de l'information pour la construction d'API flexibles et efficaces.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3>Graph<span class="graphCC">QL</span>, qu'est-ce que c'est concrètement ?</h3>
+                                    <p>
+                                        GraphQL est un langage de requête et un système de runtime pour les API (Application Programming Interface, ou interface de programmation d'application en français) qui permet aux clients de décrire les données dont ils ont besoin ainsi que la façon dont elles doivent être structurées. GraphQL a été conçu pour offrir une flexibilité accrue et une meilleure expérience de développement aux clients (browser, mobile, desktop...) en leur permettant de demander exactement les données dont ils ont besoin, plutôt que de recevoir un ensemble de données prédéterminées n'étant pas forcément nécessaires.
+                                    </p>
+                                    <p>
+                                        GraphQL est souvent utilisé pour construire des API pour les applications Web et mobile, car il permet aux développeurs de créer des API plus robustes et flexibles qui répondent aux besoins spécifiques de chaque client. GraphQL permet également d'éviter les problèmes de surcharge de données et de latence liés à l'envoi de données superflues sur le réseau.
+                                    </p>
+                                    <p>
+                                        Dans une API Rest conventionnelle, pour accéder à des données imbriquées, cela nécessite plusieurs « allers-retours » (appels API et réponse. Et à chaque fois appel, la réponse renvoie toutes les données contenues dans l'objet). Cela crée des transfert de données inutiles et des appels inutiles, ce qui cause des lenteurs côté serveur car énormément de requêtes HTTP.
+                                    </p>
+                                    <p>
+                                        Graphql est donc un langage de requêtes pour les données des API (Graph provient de l'organisation des données, qui ressemblent à un arbre et QL provient de Query Langage) ainsi qu'un environnement d'exécution de ces requêtes. 
+                                        Il s'agit d'une spécification pour implémenter une API (ce n'est ni un langage de programmation ni un Framework).
                                     </p>
                                 </div>
                             </div>
@@ -414,27 +418,28 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p>
-                                    GraphQL présente plusieurs avantages par rapport aux API REST traditionnelles :
+                                    GraphQL présente de nombreux avantages par rapport aux API REST traditionnelles.
                                 </p>
-                                <ol>
-                                    <li>
-                                        <b>Flexibilité accrue :</b> avec GraphQL, les clients peuvent spécifier exactement les données dont ils ont besoin et comment elles doivent être structurées. Cela signifie que les clients peuvent obtenir exactement les données dont ils ont besoin sans avoir à recevoir de données superflues.
-                                    </li>
-                                    <li>
-                                        <b>Meilleure expérience de développement :</b> GraphQL offre une syntaxe simple et intuitive qui facilite la création de requêtes et la gestion des réponses des serveurs. Cela peut rendre le développement d'applications plus rapide et plus facile.
-                                    </li>
-                                    <li>
-                                        <b>Amélioration de la performance :</b> GraphQL permet aux clients de demander exactement les données dont ils ont besoin, ce qui peut réduire la quantité de données envoyées sur le réseau et améliorer les temps de chargement des pages.
-                                    </li>
-                                    <li>
-                                        <b>Évolutivité :</b> GraphQL est conçu pour être évolutif et facilite l'ajout de nouvelles fonctionnalités et de nouvelles sources de données sans avoir à modifier les interfaces existantes.
-                                    </li>
-                                </ol>
+                                <p>
+                                    Tout d'abord sa flexibilité est accrue. En effet, avec GraphQL, le client peut spécifier exactement les données dont ils a besoin ainsi que la façon dont elles doivent être structurées. 
+                                    Cela signifie que les clients peuvent obtenir exactement les données dont ils ont besoin, sans données superflues.  Cela permet une optimisation des données réseau grâce à un seul appel API ainsi qu'une optimisation des requêtes pour palier à l'over-fetching et à l'under-fetching.
+                                    GraphQL permet donc aux clients de demander exactement les données dont ils ont besoin, ce qui peut réduire la quantité de données envoyées sur le réseau et améliorer les temps de chargement des pages.
+                                </p>
+                                <p>
+                                    Ensuite, graphQL c'est une très bonne expérience de développement : GraphQL offre une syntaxe simple et intuitive qui facilite la création de requêtes et la gestion des réponses des serveurs. Cela rend le développement d'applications plus rapide et plus simple.
+                                </p>
+                                <p>
+                                    De même, GraphQL est conçu pour être évolutif et facilite l'ajout de nouvelles fonctionnalités et de nouvelles sources de données sans avoir à modifier les interfaces existantes.
+                                </p>
+                                <p>
+                                    Les standard de GraphQL sont clairs et facile à suivre et à appliquer. Le schéma, qui est une nouvelle pratique de gestion des données, offre une possibilité d'introspection vis à vis de l'API (demande du schéma à l'API, retour des erreurs en direct, voir le playground).
+                                </p>
                                 <p class="text-center">
                                     <img src="/assets/img/schema.png" alt="" width="60%" style="margin:10px auto;">
                                 </p>
                                 <p>
-                                    Il convient de noter que GraphQL n'est pas toujours la meilleure solution pour tous les cas d'utilisation et qu'il peut y avoir des cas où une API REST sera plus appropriée. Cependant, pour de nombreux projets de développement d'API, GraphQL peut offrir une meilleure flexibilité et une meilleure expérience de développement que les API REST traditionnelles.
+                                    Malgré cela, GraphQL n'est pas forcément la meilleure solution pour tous les cas d'utilisation et qu'il peut y avoir des cas où une API REST semble plus appropriée. 
+                                    Cependant, pour de nombreux projets de développement d'API, GraphQL offre une meilleure flexibilité et une meilleure expérience de développement que les API REST traditionnelles.                                
                                 </p>
                             </div>
                         </div>
@@ -455,24 +460,25 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p>
-                                    Voici quelques inconvénients potentiels de l'utilisation de GraphQL :
+                                    Malgré tous ses avantages GraphQL comprend tout de même quelques inconvénients.
                                 </p>
-                                <ol>
-                                    <li>
-                                        Complexité de la mise en place : GraphQL nécessite un serveur dédié et une implémentation côté serveur pour fonctionner, ce qui peut être plus complexe à mettre en place que certaines autres technologies d'API.
-                                    </li>
-                                    <li>
-                                        Apprentissage : GraphQL est un nouveau langage de requête et peut nécessiter un temps d'apprentissage pour comprendre comment fonctionne et comment l'utiliser efficacement.
-                                    </li>
-                                    <li>
-                                        Sécurité : les attaques de type "injection de requête" sont possibles avec GraphQL, bien que cela puisse être évité en utilisant des mesures de sécurité appropriées et en validant les requêtes côté serveur.
-                                    </li>
-                                    <li>
-                                        Limitations de la pile de données : GraphQL ne peut pas être utilisé pour travailler avec des données qui ne sont pas structurées, comme les données binaires ou les fichiers multimédias.
-                                    </li>
-                                </ol>
                                 <p>
-                                    Il convient de noter que ces inconvénients ne sont pas exclusifs à GraphQL et que de nombreuses autres technologies d'API présentent également certaines limitations et complexités. Cependant, il est important de comprendre ces limitations et de prendre en compte ces facteurs lors de la décision de choisir GraphQL pour un projet de développement d'API.
+                                    En effet, GraphQL est difficile de mise en place . Sa mise en place nécessite un serveur dédié et une implémentation côté serveur pour fonctionner, ce est plus complexe à mettre en place que certaines autres technologies d'API.
+                                </p>
+                                <p>
+                                    D'un point de vue de l'apprentissage, GraphQL est un nouveau langage de requête et peut nécessiter un temps d'apprentissage pour bien comprendre et cerner son fonctionnement ainsi que la meilleure façon de l'appréhender.
+                                </p>
+                                <p>
+                                    GraphQL présente un problème de limitation de la pile de données. En effet, GraphQL ne peut pas être utilisé pour travailler avec des données non structurées, comme les données binaires. De même le téléversement de fichiers multimédias est compliqué à implémenter. Il existe cependant des techniques pour contourner ces limites (notamment la conversion des fichiers en base 64...)
+                                </p>
+                                <p>
+                                    La mise en cache serveur est difficilement envisageable avec graphQL également. En effet les requêtes sont pour la plupart personnalisées et les réponses très souvent différentes, contrairement aux requêtes d'une API REST qui, elles, retournent souvent les même résultats. 
+                                    Pour palier à cela, on utilise une mise en cache côté applicatif. 
+                                    Meta fournit également un outil de batching et de caching (Dataloader, un agrégateur de requêtes récurrentes) pour aider à la mise en cache.
+                                </p>
+                                <p>
+                                    Ainsi, graphQL présente tout de même quelques désavantages. Même si de nombreuses autres technologies d'API présentent également certaines limitations et complexités. 
+                                    Cependant, il semble important de comprendre en considération ces limitations lors de la prise de décision entre le développement d'une API GraphQL ou d'une API REST.
                                 </p>
                             </div>
                         </div>
@@ -497,7 +503,7 @@
         </div>
     </div>
     <footer>
-        <a href="#">Télécharger le compte-rendu PDF</a>
+        <a href="/assets/doc/Compte_rendu_graphql.pdf" target="_blank">Télécharger le compte-rendu PDF</a>
     </footer>
     <script src="/assets/js/typing.js"></script>
 </body>
