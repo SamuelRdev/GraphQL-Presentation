@@ -112,7 +112,7 @@ body{
         border: none;
         display: flex;
         justify-content: space-around;
-        button{
+        button,a{
           border-radius: 3px;
           padding: 7px 25px;
           transition: .3s;
@@ -139,7 +139,7 @@ body{
             }
           }
         }
-        button.active{
+        button.active, a.active{
           color: #aaa;
           border-color: #aaa;
         }

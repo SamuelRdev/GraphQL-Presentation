@@ -1,4 +1,4 @@
-1 seul endpoint
+1 seul endpoint, est une spécification donc pas d'architecture particulière
 
 Une seule requete vs multiples requetes
 

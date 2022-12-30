@@ -121,34 +121,34 @@ body main #section-4 .nav-tabs {
   display: flex;
   justify-content: space-around;
 }
-body main #section-4 .nav-tabs button {
+body main #section-4 .nav-tabs button, body main #section-4 .nav-tabs a {
   border-radius: 3px;
   padding: 7px 25px;
   transition: 0.3s;
 }
-body main #section-4 .nav-tabs button:nth-child(even) {
+body main #section-4 .nav-tabs button:nth-child(even), body main #section-4 .nav-tabs a:nth-child(even) {
   background-color: transparent;
   color: #e10098;
   border: 2px solid #e10098;
 }
-body main #section-4 .nav-tabs button:nth-child(even):hover {
+body main #section-4 .nav-tabs button:nth-child(even):hover, body main #section-4 .nav-tabs a:nth-child(even):hover {
   background: transparent;
   color: #fff;
   border: 2px solid white;
   transform: scale(1.1);
 }
-body main #section-4 .nav-tabs button:nth-child(odd) {
+body main #section-4 .nav-tabs button:nth-child(odd), body main #section-4 .nav-tabs a:nth-child(odd) {
   background: transparent;
   color: #fff;
   border: 2px solid white;
 }
-body main #section-4 .nav-tabs button:nth-child(odd):hover {
+body main #section-4 .nav-tabs button:nth-child(odd):hover, body main #section-4 .nav-tabs a:nth-child(odd):hover {
   background-color: transparent;
   color: #e10098;
   border: 2px solid #e10098;
   transform: scale(1.1);
 }
-body main #section-4 .nav-tabs button.active {
+body main #section-4 .nav-tabs button.active, body main #section-4 .nav-tabs a.active {
   color: #aaa;
   border-color: #aaa;
 }

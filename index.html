@@ -115,7 +115,7 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">GraphQL API</button>
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Restful API</button>
-                            <button class="tousmaispastoi" data-bs-toggle="modal" data-bs-target="#modalFive">Playground GraphQL</button>
+                            <!--<button class="tousmaispastoi" data-bs-toggle="modal" data-bs-target="#modalFive">--><a class="nav-link" href="https://countries.trevorblades.com/" target="_blank">Playground GraphQL</a><!--</button>-->
                         </div>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
@@ -370,8 +370,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">Quels sont les avantages de Graph<span class="graphCC">QL</span></h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title" id="exampleModalLabel">Quels sont les avantages de Graph<span class="graphCC">QL</span></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -382,21 +382,25 @@
                                 </p>
                                 <ol>
                                     <li>
-                                        Flexibilité accrue : avec GraphQL, les clients peuvent spécifier exactement les données dont ils ont besoin et comment elles doivent être structurées. Cela signifie que les clients peuvent obtenir exactement les données dont ils ont besoin sans avoir à recevoir de données superflues.
+                                        <b>Flexibilité accrue :</b> avec GraphQL, les clients peuvent spécifier exactement les données dont ils ont besoin et comment elles doivent être structurées. Cela signifie que les clients peuvent obtenir exactement les données dont ils ont besoin sans avoir à recevoir de données superflues.
                                     </li>
                                     <li>
-                                        Meilleure expérience de développement : GraphQL offre une syntaxe simple et intuitive qui facilite la création de requêtes et la gestion des réponses des serveurs. Cela peut rendre le développement d'applications plus rapide et plus facile.
+                                        <b>Meilleure expérience de développement :</b> GraphQL offre une syntaxe simple et intuitive qui facilite la création de requêtes et la gestion des réponses des serveurs. Cela peut rendre le développement d'applications plus rapide et plus facile.
                                     </li>
                                     <li>
-                                        Amélioration de la performance : GraphQL permet aux clients de demander exactement les données dont ils ont besoin, ce qui peut réduire la quantité de données envoyées sur le réseau et améliorer les temps de chargement des pages.
+                                        <b>Amélioration de la performance :</b> GraphQL permet aux clients de demander exactement les données dont ils ont besoin, ce qui peut réduire la quantité de données envoyées sur le réseau et améliorer les temps de chargement des pages.
                                     </li>
                                     <li>
-                                        Évolutivité : GraphQL est conçu pour être évolutif et facilite l'ajout de nouvelles fonctionnalités et de nouvelles sources de données sans avoir à modifier les interfaces existantes.
+                                        <b>Évolutivité :</b> GraphQL est conçu pour être évolutif et facilite l'ajout de nouvelles fonctionnalités et de nouvelles sources de données sans avoir à modifier les interfaces existantes.
                                     </li>
                                 </ol>
-                                <p>
-                                    Il convient de noter que GraphQL n'est pas toujours la meilleure solution pour tous les cas d'utilisation et qu'il peut y avoir des cas où une API REST sera plus appropriée. Cependant, pour de nombreux projets de développement d'API, GraphQL peut offrir une meilleure flexibilité et une meilleure expérience de développement que les API REST traditionnelles.                            </div>
+                                <p class="text-center">
+                                    <img src="/assets/img/schema.png" alt="" width="60%" style="margin:10px auto;">
                                 </p>
+                                <p>
+                                    Il convient de noter que GraphQL n'est pas toujours la meilleure solution pour tous les cas d'utilisation et qu'il peut y avoir des cas où une API REST sera plus appropriée. Cependant, pour de nombreux projets de développement d'API, GraphQL peut offrir une meilleure flexibilité et une meilleure expérience de développement que les API REST traditionnelles.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
