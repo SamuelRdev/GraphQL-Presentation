@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/graphql-playground-react/build/static/js/middleware.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>GraphQL - LP DAWIN</title>
 </head>
 <body>
@@ -65,9 +67,9 @@
                         </div>
                         
                         <div class="card card-two">
-                            <h2 class="card-title">Mise en place&nbsp;?</h2>
-                            <p class="date">Création & utilisation</p>
-                            <p class="description">Il existe de nombreux outils qui supportent graphQL ou aident à construire des API graphQL, dans de de multiples langages...</p>
+                            <h2 class="card-title">Comment ça marche&nbsp;?</h2>
+                            <p class="date">Fonctionnement & implémentation</p>
+                            <p class="description">Il existe de nombreux outils qui supportent graphQL ou aident à construire des API graphQL...</p>
                             <a data-bs-toggle="modal" data-bs-target="#modalTwo">
                                 Tous les détails
                             </a>
@@ -279,8 +281,9 @@
                         <ol>
                             <li>GraphQL tools et intégration : <a href="https://graphql.org/code/" target="_blank">https://graphql.org/code/</a></li>
                             <li>Rest vs GraphQL : <a href="https://kinsta.com/fr/blog/graphql-vs-rest/" target="_blank">https://kinsta.com/fr/blog/graphql-vs-rest/</a></li>
-                            <li>GraphQL API playground : <a href="https://countries.trevorblades.com/" target="_blank">https://countries.trevorblades.com/</a></li>
+                            <li>GraphQL API playground (free GraphQL API) : <a href="https://countries.trevorblades.com/" target="_blank">https://countries.trevorblades.com/</a></li>
                             <li>Support vidéo : <a href="https://www.youtube.com/watch?v=6FtdUoyBK7c&list=PLl3CtU4THqPZd5ZrMYnljdgJzMQ35FhNl" target="_blank">https://www.youtube.com/watch?v=6FtdUoyBK7c&list=PLl3CtU4THqPZd5ZrMYnljdgJzMQ35FhNl</a></li>
+                            <li>Blog explicatif GraphQL : <a href="https://blog.octo.com/graphql-et-pourquoi-faire/" target="_blank">https://blog.octo.com/graphql-et-pourquoi-faire/</a></li>
                         </ol>
                     </div>
                 </div>
@@ -334,31 +337,64 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">Mise en place de Graph<span class="graphCC">QL</span> ?</h2>
+                <h2 class="modal-title" id="exampleModalLabel">Graph<span class="graphCC">QL</span>, comment ça marche ?</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>
-                                    Il existe plusieurs façons de développer une API avec GraphQL. Voici quelques exemples :
-                                </p>
-                                <ol>
-                                    <li>
-                                        En utilisant un framework de développement de serveur GraphQL, comme Express-GraphQL ou Apollo Server. Ces frameworks offrent une interface simple pour définir les types de données et les resolvers de GraphQL, et pour configurer un serveur GraphQL qui peut être intégré à un serveur web existant.
-                                    </li>
-                                    <li>
-                                        En utilisant une bibliothèque de client GraphQL, comme Apollo Client ou Relay, pour écrire une application web qui utilise GraphQL pour interroger un serveur distant.
-                                    </li>
-                                    <li>
-                                        En utilisant une bibliothèque de serveur GraphQL telle que GraphQL.js pour écrire un serveur GraphQL à partir de zéro en utilisant Node.js. Cette approche nécessite une connaissance approfondie de GraphQL et de l'implémentation de serveur GraphQL, mais elle peut être utile dans des cas où vous souhaitez un contrôle total sur la façon dont le serveur GraphQL est mis en place et exécuté.
-                                    </li>
+                                <div>
+                                    <h3>Comment fonctionne une API GraphQL ?</h3>
                                     <p>
-                                        Il existe également des services en ligne qui vous permettent de développer une API GraphQL sans avoir à gérer l'infrastructure de serveur. Par exemple, AWS AppSync et Graphcool sont des services de back-end basés sur GraphQL qui vous permettent de développer une API GraphQL sans avoir à écrire de code de serveur.
+                                        <p>
+                                            Pour obtenir des données avec REST et tous ses endpoints il est nécessaire de faire plusieurs appels à la base de donnée (appels API) pour obtenir les données imbriquées.
+                                        </p>
+                                        <p>
+                                            Avec GraphQL, 1 seul appel suffit. Il ne possède qu'un seul endpoint.
+                                        </p>
+                                        <p>
+                                            Avec REST l'objet reçu d'un appel API est refaçonné côté back-end. 
+                                            En effet l'objet complet est retourné a chaque appel avec impossibilité de définir les données spécifiques appelées ou non. 
+                                            Cependant, avec GraphQL il est possible de définir directementet dynamiquement l'objet que l'ont reçoit côté client après un appel API (Voir différence dans les appels/réponse API, section GraphQL & API REST).
+                                        </p>
+                                        <p>
+                                            Dans une API REST comme dans une API GraphQL, l'architecture de l'API est la même. 
+                                            Seule la couche de routage change passant de REST à GraphQL.
+                                            L’environnement d’exécution de GraphQl est une couche de routage de l’API, qui interprète des requêtes GraphQL, reçues via le payload d’un POST.
+                                        </p>
+                                        <p>
+                                            Dans une requête GraphQL l'ordre demandé des objets est respecté lors de la réponse de l'API.
+                                            GraphQL, en plus d'être un langage de requête, est également un environnement d'exécution qui interprète et structure ces requêtes à partir d'un schéma.
+                                            Dans le schéma GraphQL on définit tous les objets GraphQL, leurs types ainsi que toutes les requêtes possibles dans un objet global Query, qui est endpoint unique pour les appels API dans une API GraphQL, ainsi que les actions disponibles dans l'objet global Mutation (dont les entrées font office de crud et où on y définit les fonctions telles que createObject, delete, etc...)
+                                        </p>
+                                        <p>
+                                            Lorsqu'une requête est envoyée, le serveur GraphQL vérifie que la requête est bien disponible dans l'objet global Query  et que les champs demandés correspondent bien au retour de la requête en question.
+                                            Une fois cela accompli, le serveur GraphQL fait appel à ce que l'ont appel des Resolvers.
+                                            Un resolver associe une fonction de l’API (récupération de données de la base de données, appels à une API tierce, etc…) à une requête ou une action définie dans les objets globaux du schéma (Query et Mutation). Le resolver récupère les données et les réorganise (les champs demandés, dans l’ordre demandé) pour que la réponse corresponde à la requête.
+                                        </p>
                                     </p>
-                                    <h3>Comment travailler avec graphQL :</h3>
-                                </ol>
+                                </div>
+                                <div>
+                                    <h3>Comment mettre en place une API GraphQL ?</h3>
+                                    <p>
+                                        Il existe différentes façons de développer une API avec GraphQL et toutes ces façons d'implémentations sont listées dans la documentation officielle de GraphQL (<a href="https://graphql.org/code/" target="_blank">https://graphql.org/code/</a>). GraphQL est compatible avec une majorité de langages car il s'agit d'une spécification.
+                                    </p>
+                                    <p>
+                                        Il est possible d'implémenter une API GraphQL en utilisant un framework de développement de serveur GraphQL, comme Express-GraphQL ou Apollo Server. Ces frameworks offrent une interface simple pour définir les types de données ainsi que les resolvers de GraphQL, et pour configurer un serveur GraphQL qui peut être intégré à un serveur web existant.
+                                    </p>
+                                    <p>
+                                        Ou en utilisant une bibliothèque de client GraphQL, comme Apollo Client ou Relay, pour écrire une application web qui utilise GraphQL pour interroger un serveur distant.
+                                    </p>
+                                    <p>
+                                        Il est également possible d'utiliser une bibliothèque de serveur GraphQL telle que GraphQL.js pour écrire un serveur GraphQL from scratch en utilisant Node.js. 
+                                        Cette approche nécessite une connaissance approfondie de GraphQL et de l'implémentation de serveur GraphQL, mais elle peut être utile dans des cas où l'ont souhaiterait avoir un contrôle total sur la façon dont le serveur GraphQL est mis en place et exécuté.
+                                    </p>
+                                    <p>
+                                        Il existe également des services en ligne qui permettent de développer une API GraphQL sans avoir à gérer l'infrastructure de serveur. 
+                                        Par exemple, AWS AppSync et Graphcool, qui sont des services de back-end basés sur GraphQL qui permettent de développer une API GraphQL sans avoir à écrire de code de serveur.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -461,15 +497,8 @@
         </div>
     </div>
     <footer>
-        Et bah non, pas de footer.
+        <a href="#">Télécharger le compte-rendu PDF</a>
     </footer>
-    <!-- <script>
-        window.addEventListener('load', function (event) {
-            GraphQLPlayground.init(document.getElementById('playground'), {
-            // options as 'endpoint' belong here
-            })
-        })
-    </script> -->
     <script src="/assets/js/typing.js"></script>
 </body>
 </html>

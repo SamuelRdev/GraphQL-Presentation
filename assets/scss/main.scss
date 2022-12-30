@@ -12,8 +12,12 @@ html {
 }
 
 body{
+  overflow-x: hidden;
   color: white;
   background: rgb(245, 246, 248);
+  a{
+    word-break: break-all;
+  }
   #navigation{
       z-index: 12;
       width: 100%;
@@ -23,17 +27,24 @@ body{
       justify-content: space-between;
       height: 10vh;
       position: fixed;
+      @media (max-width:900px){
+        font-size: .9rem;
+      }
       @media (max-width:768px){
         flex-direction: column;
         align-items: center;
         height: auto;
         padding: 10px 0;
+        position: relative;
+        background-color: #202020;
       }
       ul{
         @media (max-width:768px){
           margin: 0;
           width: 100%;
           justify-content: space-around;
+          flex-wrap: wrap;
+          padding-left: 0;
         }
           display: flex;
           justify-content: space-between;
@@ -81,6 +92,9 @@ body{
     #section-2{
       max-width: 60%;
       margin: 0 auto;
+      @media (max-width:992px){
+        max-width: 90%;
+      }
       p{
         color: #202020;
         font-size: 1.5rem;
@@ -94,6 +108,9 @@ body{
           color: #202020;
           font-size: 1.5rem;
           text-align: center;
+          @media (max-width:600px){
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -116,6 +133,9 @@ body{
           border-radius: 3px;
           padding: 7px 25px;
           transition: .3s;
+          @media (max-width: 500px){
+            margin-top: 20px;
+          }
           &:nth-child(even){
             background-color: transparent;
             color: $graphC;
@@ -175,6 +195,12 @@ body{
     section{
       min-height: 100vh;
       height: 100vh;
+      display: flex;
+      align-items: center;
+      @media (max-width:992px){
+        height: auto;
+        padding: 50px 0;
+      }
     }
   }
   .modal{
@@ -223,6 +249,7 @@ body{
         }
         .modal-body{
           h3{
+            margin-top: 50px;
             &:after{
               content: "";
               height: 4px;
@@ -237,6 +264,12 @@ body{
     }
   }
   footer{
+    a{
+      color: $graphC;
+      &:hover{
+        text-decoration: none;
+      }
+    }
     text-align: center;
     background-color: #202020;
     padding: 20px;
@@ -255,10 +288,14 @@ body{
       gap: 0.75rem;
       pointer-events: none;
       @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
-      @media (max-width: 768px) {
-        grid-template-columns: repeat(1, 1fr);
+      @media (max-width: 992px) {
+        display: flex;
+        max-height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
     }
     
@@ -325,10 +362,18 @@ body{
       &:nth-child(even) {
         transform: rotate(-5deg);
         margin-top: -50px;
+        @media (max-width:1201px){
+          transform: rotate(0deg);
+          margin-top: 0;
+        }
       }
       &:nth-child(odd) {
         transform: rotate(5deg);
         margin-top: 50px;
+        @media (max-width:1201px){
+          transform: rotate(0deg);
+          margin-top: 0;
+        }
       }
       // &:nth-child(2){
       //   margin-top: 50px;
@@ -359,6 +404,12 @@ body{
   @media (max-width:768px){
     justify-content: flex-start!important;
     align-items: center!important;
+    margin-top: 50px;
+  }
+  h2{
+    @media (max-width:768px){
+      text-align: center;
+    }
   }
 }
 .cursor {
@@ -378,4 +429,10 @@ body{
 }
 .green-vsc{
   color: rgb(41, 185, 115);
+}
+.slick-list{
+  width: 100%;
+  .slick-track{
+    width: 100%;
+  }
 }
